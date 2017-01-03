@@ -28,9 +28,19 @@ public class TestUser
 		user.setMobile("8187007009");
 		user.setRole("A");
 		
+		
+		user.setId(21);
+		user.setName("ramu");
+		user.setPassword("12345");
+		user.setMobile("8187707009");
+		user.setRole("B");
+		
+		List<User> u= userDao.list();
+		for(User m: u)
+			System.out.println(m.getId()+" \t"+m.getName()+"\t"+m.getMobile()+"\t"+m.getPassword());
 		//userDao.save(user);
 		
-		userDao.update(user);
+		//userDao.update(user);
 	
 	}
 

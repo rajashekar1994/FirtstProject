@@ -46,7 +46,7 @@ public class ApplicationContextConfig
 		return properties;
 	}
 	
-	@Autowired
+	@Autowired //to inject the object dependency implicitly. It internally uses setter or constructor injection.
 	@Bean(name = "sessionFactory")
 	public SessionFactory getSessionFactory(DataSource dataSource)
 	{

@@ -4,11 +4,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
-@Entity
-@Component
+@Entity  //@Entity annotation to the Employee class which marks this class as an entity bean//
+
+@Component //@Component annotation marks a java class as a bean 
+          //so the component-scanning mechanism of spring can pick it up and pull it into the application context//
+
+
+
 public class User 
 { 
-	@Id
+	@Id //@Id annotation. The primary key can be a single field or a combination of  multiple fields //
 	 private int id;
 	 private String name;
 	 private String password;

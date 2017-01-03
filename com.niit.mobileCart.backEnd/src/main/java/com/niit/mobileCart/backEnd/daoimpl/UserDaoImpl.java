@@ -26,7 +26,7 @@ public class UserDaoImpl implements  UserDao
 
 	@Transactional
 	public List<User> list() {
-		String str="from user";
+		String str="from User";
 	Query query=sessionFactory.getCurrentSession().createQuery(str);
 		return query.list();
 	}
@@ -39,7 +39,7 @@ public class UserDaoImpl implements  UserDao
 
 	@Transactional
 	public User validate(String id, String password) {//select *from user wher id='niit' and paswrd='niit'
-	String str="from user where id='"+id +"' and password='"+password +"'";
+	String str="from User where id='"+id +"' and password='"+password +"'";
 	Query query=sessionFactory.getCurrentSession().createQuery(str)	;
 			return(User) query.uniqueResult();
 	}
