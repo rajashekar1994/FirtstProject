@@ -14,15 +14,15 @@ import org.springframework.stereotype.Component;
 public class User 
 { 
 	@Id //@Id annotation. The primary key can be a single field or a combination of  multiple fields //
-	 private int id;
+	 private String id;
 	 private String name;
 	 private String password;
 	private String mobile;
 	private String role;
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.niit.mobileCart.backEnd.dao.UserDao;
+import com.niit.mobileCart.backEnd.model.Category;
 import com.niit.mobileCart.backEnd.model.User;
 
 public class TestUser 
@@ -22,23 +23,32 @@ public class TestUser
 		User user=(User)context.getBean("user");
 		
 		
-		user.setId(20);
+		user.setId("20");
 		user.setName("raj");
 		user.setPassword("123");
 		user.setMobile("8187007009");
 		user.setRole("A");
 		
 		
-		user.setId(21);
+		user.setId("21");
 		user.setName("ramu");
 		user.setPassword("12345");
 		user.setMobile("8187707009");
 		user.setRole("B");
 		
-		List<User> u= userDao.list();
+		user.setId("22");
+		user.setName("ramu");
+		user.setPassword("12345");
+		user.setMobile("8187707009");
+		user.setRole("B");
+		
+		
+		
+		
+		/*List<User> u= userDao.list();
 		for(User m: u)
-			System.out.println(m.getId()+" \t"+m.getName()+"\t"+m.getMobile()+"\t"+m.getPassword());
-		//userDao.save(user);
+			System.out.println(m.getId()+" \t"+m.getName()+"\t"+m.getMobile()+"\t"+m.getPassword());*/
+		userDao.save(user);
 		
 		//userDao.update(user);
 	
@@ -54,7 +64,7 @@ public class TestUser
 		//@Autowired
 		//AnnotationConfigApplicationContext context;
 		//public TestUser()
-		//{
+		//
 			//context=new AnnotationConfigApplicationContext();
 			//specify in which pacajge you defined the classes->scan
 			//context.scan("niit");

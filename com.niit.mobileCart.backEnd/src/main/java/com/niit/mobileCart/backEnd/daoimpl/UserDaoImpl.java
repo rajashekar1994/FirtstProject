@@ -32,13 +32,15 @@ public class UserDaoImpl implements  UserDao
 	}
 
 	@Transactional
-	public User get(String id) {
+	public User get(String id) 
+	{
 		// TODO Auto-generated method stub
-		return null;
+		return sessionFactory.getCurrentSession().get(User.class, id);
 	}
 
 	@Transactional
-	public User validate(String id, String password) {//select *from user wher id='niit' and paswrd='niit'
+	public User validate(String id, String password) 
+	{//select *from user wher id='niit' and paswrd='niit'
 	String str="from User where id='"+id +"' and password='"+password +"'";
 	Query query=sessionFactory.getCurrentSession().createQuery(str)	;
 			return(User) query.uniqueResult();
@@ -47,28 +49,32 @@ public class UserDaoImpl implements  UserDao
 	@Transactional
 	public boolean save(User user) 
 	{
-		try {
+		try 
+		{
 			sessionFactory.getCurrentSession().save(user);
-		} catch (HibernateException e) {
+		} 
+		catch (HibernateException e) 
+		{
 			
 			e.printStackTrace();
+			return false;
 		}
-		
-		return false;
+		return true;
 	}
 
 	@Transactional
 	public boolean update(User user) 
 	{
-		try {
+		try 
+		{
 			sessionFactory.getCurrentSession().update(user);
-		} catch (HibernateException e) {
-			
-			e.printStackTrace();
 		}
-	
-		
-		return false;
+		catch (HibernateException e) 
+		{	
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 }

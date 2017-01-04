@@ -1,6 +1,6 @@
 package com.niit.mobileCart.backEnd.config;
 
-import java.util.Locale.Category;
+
 import java.util.Properties;
 import java.util.function.Supplier;
 
@@ -17,6 +17,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.mobileCart.backEnd.model.Category;
 import com.niit.mobileCart.backEnd.model.User;
 
 @Configuration
@@ -52,7 +53,7 @@ public class ApplicationContextConfig
 	{
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		//sessionBuilder.addAnnotatedClass(Category.class);
+		sessionBuilder.addAnnotatedClass(Category.class);
 		//sessionBuilder.addAnnotatedClass(Supplier.class);
 		sessionBuilder.addAnnotatedClass(User.class);
 		return sessionBuilder.buildSessionFactory();
