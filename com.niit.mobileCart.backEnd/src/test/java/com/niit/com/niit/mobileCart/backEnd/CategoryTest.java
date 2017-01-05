@@ -20,15 +20,20 @@ public class CategoryTest {
 		category.setName("sony");
 		category.setDescription("male");
 
+		category.setId("89");
+		category.setName("mobile");
+		category.setDescription("nokia");
 		/*
 		 * List<User> u= userDao.list(); for(User m: u)
 		 * System.out.println(m.getId()+" \t"
 		 * +m.getName()+"\t"+m.getMobile()+"\t"+m.getPassword());
 		 */
-		//categoryDAO.save(category);
+		
+		
+		categoryDAO.save(category);
 
 		// userDao.update(user);
-		categoryDAO.update(category);
+		//categoryDAO.update(category);
 
 	}
 

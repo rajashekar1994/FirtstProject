@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.niit.com.niit.mobileCart.backEnd;
 
 import static org.junit.Assert.*;
@@ -19,14 +16,13 @@ import com.niit.mobileCart.backEnd.model.User;
 
 import junit.framework.Assert;
 
-public class UserDaoTestCase 
-{
+public class CategoryTestCase {
 
 	@Autowired
-	static UserDao userDao;
+	static CategoryDAO categoryDAO;
 
 	@Autowired
-	static User user;
+	static Category category;
 
 	@Autowired
 	static AnnotationConfigApplicationContext context;
@@ -42,30 +38,26 @@ public class UserDaoTestCase
 		context.scan("com.niit");
 		context.refresh();
 
-		user = (User) context.getBean("user");
-		userDao = (UserDao) context.getBean("userDao");
+		category = (Category) context.getBean("category");
+		categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
 
 	}
 
 	@Test
-	public void getUserTestCase() 
+	public void getCategoryTestCase() 
 	{
-		user = userDao.get("20");
+		category = categoryDAO.get("88");
 		// assert statements
-		Assert.assertEquals("User Test Case", "raj", user.getName());
-		
-	
+		Assert.assertEquals("CATEGORY Test Case", "sony", category.getName());
 	}
 	
 	@Test
-	public void getUserList()
+	public void getCategoryList()
 	{
-		List<User> userList=userDao.list();
-		int count = userList.size();
-		Assert.assertEquals("size", 5, count);
+		List<Category> categoryList=categoryDAO.list();
+		int count = categoryList.size();
+		Assert.assertEquals("size", 2, count);
 		
 	}
-
 
 }
-

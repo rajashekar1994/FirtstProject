@@ -12,22 +12,22 @@ public class Product
 {
 	@Id
 	private String id;
-	private String price;
+	private int price;
 	private String name;
 	private String description;
 	private String category;
 	private String supplier;
-	private String stock;
+	private int stock;
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getName() {
@@ -54,10 +54,10 @@ public class Product
 	public void setSupplier(String supplier) {
 		this.supplier = supplier;
 	}
-	public String getStock() {
+	public int getStock() {
 		return stock;
 	}
-	public void setStock(String stock) {
+	public void setStock(int stock) {
 		this.stock = stock;
 	}
 

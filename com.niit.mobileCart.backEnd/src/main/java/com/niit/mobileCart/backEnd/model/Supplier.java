@@ -1,3 +1,4 @@
+
 package com.niit.mobileCart.backEnd.model;
 
 import javax.persistence.Entity;
