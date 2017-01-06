@@ -40,7 +40,7 @@ public class TestUser
 		user.setName("ramu");
 		user.setPassword("12345");
 		user.setMobile("8187707009");
-		user.setRole("B");
+		user.setRole("C");
 		
 		
 		
@@ -48,9 +48,9 @@ public class TestUser
 		/*List<User> u= userDao.list();
 		for(User m: u)
 			System.out.println(m.getId()+" \t"+m.getName()+"\t"+m.getMobile()+"\t"+m.getPassword());*/
-		userDao.save(user);
+		//userDao.save(user);
 		
-		//userDao.update(user);
+		userDao.update(user);
 	
 	}
 
