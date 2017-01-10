@@ -14,7 +14,7 @@ import com.niit.mobileCart.backEnd.dao.ProductDao;
 import com.niit.mobileCart.backEnd.model.Product;
 import com.niit.mobileCart.backEnd.model.Supplier;
 
-@Repository
+@Repository("productDao")
 @EnableTransactionManagement
 
 public class ProductDaoImpl implements ProductDao

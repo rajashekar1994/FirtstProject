@@ -22,9 +22,9 @@ public class ProductTest {
 		product.setPrice(1234567);
 		product.setName("wwwww");
 		product.setDescription("male");
-		product.setCategory("raj");
-		product.setSupplier("mobile");
-		product.setStock(22);
+		product.setCategory_id("88");
+		product.setSupplier_id("200");
+		product.setStock(100);
 		/*
 		 * List<User> u= userDao.list(); for(User m: u)
 		 * System.out.println(m.getId()+" \t"
@@ -32,7 +32,9 @@ public class ProductTest {
 		 */
 		
 		
-		productDao.save(product);
+		//productDao.save(product);
+		
+		productDao.update(product);
 
 		// userDao.update(user);
 		//categoryDAO.update(category);
